@@ -42,3 +42,16 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+#for rails admin
+gem 'remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
+# authentication and user roles.
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
+
+
+gem 'coffee-script-source', '1.8.0'
