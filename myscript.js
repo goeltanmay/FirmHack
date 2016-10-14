@@ -123,7 +123,7 @@ document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> 
                         }
                         else
                         {
-                            document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> <a href="javascript:register_popup(\''+ member_array[i].user_id + ' \',\' ' + member_array[i].nickname + '\');"><span>'+ member_array[i].nickname+'</span></a> Offline </div>';
+                            document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> <a href="javascript:register_popup(\''+ member_array[i].user_id + ' \',\' ' + member_array[i].nickname + '\');"><span>'+ member_array[i].nickname+'</span></a> '+ (new Date(new Date() - new Date(member_array[i].last_seen_at))).getMinutes() + 'm</div>';
                         }
                     }
                 });
