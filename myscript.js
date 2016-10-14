@@ -55,7 +55,6 @@ Array.remove = function(array, from, to) {
             //creates markup for a new popup. Adds the id to popups array.
             function register_popup(id, name)
             {
-                
                 for(var iii = 0; iii < popups.length; iii++)
                 {   
                     //already registered. Bring it to front.
@@ -108,6 +107,26 @@ Array.remove = function(array, from, to) {
                 
                 display_popups();
                 
+            }
+
+            function display_members()
+            {
+                var member_ledger = MemberLedger();
+                member_ledger.__init__().then(function () {
+                    var member_array = member_ledger.get_all_members();
+                    console.log(member_array);
+                    for (var i = 0; i < member_array.length ; i++) {
+                        //document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> <a href="javascript:register_popup(\''+ member_array[i].user_id + ' \',\' ' + member_array[i].nickname + '\');"><span>'+ member_array[i].nickname+'</span></a> </div>';
+                        if(member_array[i].is_online)
+                        {
+document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> <a href="javascript:register_popup(\''+ member_array[i].user_id + ' \',\' ' + member_array[i].nickname + '\');"><span>'+ member_array[i].nickname+'</span></a> Online</div>';
+                        }
+                        else
+                        {
+                            document.getElementById("member_list").innerHTML += '<div class="sidebar-name"> <a href="javascript:register_popup(\''+ member_array[i].user_id + ' \',\' ' + member_array[i].nickname + '\');"><span>'+ member_array[i].nickname+'</span></a> '+ (new Date(new Date() - new Date(member_array[i].last_seen_at))).getMinutes() + 'm</div>';
+                        }
+                    }
+                });
             }
             
             //recalculate when window is loaded and also when window is resized.
