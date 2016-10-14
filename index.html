@@ -19,13 +19,15 @@
 	<script type="text/javascript" src="lib/js/services/conversationmanager.js"></script>
 	<script type="text/javascript" src="lib/js/services/chat.js"></script>
 	<script type="text/javascript" src="lib/js/services/messagehub.js"></script>
-	<script type="text/javascript" src="lib/js/services/main.js"></script>
+	<!--script type="text/babel" src="lib/js/services/main.js"></script-->
 
 
     <script type="text/babel" src="lib/js/views/chatwindow.js"></script>
+    <script type="text/babel" src="lib/js/views/contactlist.js"></script>
+    <script type="text/babel" src="lib/js/views/app_all.js"></script>
     <script type="text/babel">
     ReactDOM.render(
-	  React.createElement(ChatWindow, null),
+	  React.createElement(Parent, null),
 	  document.getElementById('content')
 	);
     </script>
