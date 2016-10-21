@@ -1,9 +1,13 @@
 <!doctype html>
 <html>
     <head>
-        <title>Facebook Style Popup Design</title>
+        <title>LexisNexis</title>
         <link rel="stylesheet" type="text/css" href="mystyle.css">
        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="lib/js/node_modules/sendbird/SendBird.min.js"></script>
     <script type="text/javascript" src="lib/js/services/memberledger.js"></script>
     <script type="text/javascript" src="lib/js/services/conversationmanager.js"></script>
@@ -15,9 +19,26 @@
 
     </head>
     <body onload="display_members()">
-        <div class="chat-sidebar" id = "member_list">
-            
+    <div class="container-fluid">
+    <div class="col">
+    <div class="row-sm-2">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header col-sm-11">
+            <a class="navbar-brand" href="#">LexisNexis</a>
         </div>
-        
+        <ul class="nav navbar-nav col-sm-1">
+            <li class="active"><a style="align:right;" href="login.html">Logout</a></li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <div class="row-sm-10">
+    <div class="sidebar-nav nav chat-sidebar" id = "member_list">
+            
+    </div>
+    </div>
+    </div>    
+    </div>
     </body>
 </html>

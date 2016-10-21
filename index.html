@@ -1,5 +1,10 @@
 <head>
-
+	<meta charset="utf-8" />
+	<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <!-- // <script src="https://unpkg.com/jquery@3.1.0/dist/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/remarkable@1.7.1/dist/remarkable.min.js"></script>
 </head>
 
 
@@ -7,11 +12,23 @@
 
 	<input type="text-area" id="message"/>
 	<button id="button">Send</button>
+	<div id="content"></div>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript" src="lib/js/node_modules/sendbird/SendBird.min.js"></script>
 	<script type="text/javascript" src="lib/js/services/memberledger.js"></script>
 	<script type="text/javascript" src="lib/js/services/conversationmanager.js"></script>
 	<script type="text/javascript" src="lib/js/services/chat.js"></script>
 	<script type="text/javascript" src="lib/js/services/messagehub.js"></script>
-	<script type="text/javascript" src="lib/js/services/main.js"></script>
+	<!--script type="text/babel" src="lib/js/services/main.js"></script-->
+
+
+    <script type="text/babel" src="lib/js/views/chatwindow.js"></script>
+    <script type="text/babel" src="lib/js/views/contactlist.js"></script>
+    <script type="text/babel" src="lib/js/views/app_all.js"></script>
+    <script type="text/babel">
+    ReactDOM.render(
+	  React.createElement(Parent, null),
+	  document.getElementById('content')
+	);
+    </script>
 </body>
